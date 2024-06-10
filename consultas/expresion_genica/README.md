@@ -1,4 +1,5 @@
-Aqui algunas consultas como por ejemplo
+Algunas consultas que podrías usar para practicar:
+
 **Consulta 1:** Obtén la información de aquellas muestras que estén relacionadas con el gen cuyo id es 87
 
 **Consulta 2:** De la paciente cuyo id es 101, devolver una tupla (tabla) que diga el Id de cada una de sus muestras, su descripción, fecha de recolección y el nivel de expresión para el gen 1.
