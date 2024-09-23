@@ -21,7 +21,7 @@ XML (acrónimo de Extensible Markup Language) es un lenguaje de marcado que defi
 
 <a name="desarrollo"></a>  
 ## Clausulas FLWOR
-
+Recomendación ver dataset para dummys, donde explicaré todo de forma para principiantes
 **For, Let, Where, Order by, Return (FLWOR)**
 ````
 For: This clause selects a sequence of nodes. It’s similar to the FROM clause in SQL. example: for $x in doc("books.xml")/
