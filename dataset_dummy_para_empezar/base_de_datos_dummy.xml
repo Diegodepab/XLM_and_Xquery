@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<secuenciasBio>
+
+  <secuenciaBio>
+    <nombre>Secuencia1</nombre>
+    <tipo>ADN</tipo>
+    <secuencia>ATCGATCGATCG</secuencia>
+    <longitud>12</longitud>
+    <temperaturaOptima>65.5</temperaturaOptima>
+    <fechaDescubrimiento>2005-10-15</fechaDescubrimiento>
+    <activo>true</activo>
+    <informacionAdicional>
+      <autor>Dr. Smith</autor>
+      <referencia>DOI:12345</referencia>
+    </informacionAdicional>
+  </secuenciaBio>
+  
+  <secuenciaBio>
+    <nombre>Secuencia2</nombre>
+    <tipo>ARN</tipo>
+    <secuencia>GCUAGCUAGCUA</secuencia>
+    <longitud>12</longitud>
+    <temperaturaOptima>58.2</temperaturaOptima>
+    <fechaDescubrimiento>2010-05-20</fechaDescubrimiento>
+    <activo>false</activo>
+    <informacionAdicional>
+      <autor>Dr. Johnson</autor>
+      <referencia>DOI:54321</referencia>
+    </informacionAdicional>
+  </secuenciaBio>
+  
+  <secuenciaBio>
+    <nombre>Secuencia3</nombre>
+    <tipo>Proteína</tipo>
+    <secuencia>MSYTFEKPQR</secuencia>
+    <longitud>10</longitud>
+    <temperaturaOptima>72.0</temperaturaOptima>
+    <fechaDescubrimiento>2015-08-12</fechaDescubrimiento>
+    <activo>true</activo>
+    <informacionAdicional>
+      <autor>Dr. Lee</autor>
+      <referencia>DOI:98765</referencia>
+    </informacionAdicional>
+  </secuenciaBio>
+  
+  <secuenciaBio>
+    <nombre>Secuencia4</nombre>
+    <tipo>ADN</tipo>
+    <secuencia>CGTAGCTAGCTA</secuencia>
+    <longitud>12</longitud>
+    <temperaturaOptima>63.8</temperaturaOptima>
+    <fechaDescubrimiento>2008-12-04</fechaDescubrimiento>
+    <activo>true</activo>
+    <informacionAdicional>
+      <autor>Dr. Brown</autor>
+      <referencia>DOI:67890</referencia>
+    </informacionAdicional>
+  </secuenciaBio>
+  
+  <secuenciaBio>
+    <nombre>Secuencia5</nombre>
+    <tipo>ARN</tipo>
+    <secuencia>CAGTCAGTCAGT</secuencia>
+    <longitud>12</longitud>
+    <temperaturaOptima>60.7</temperaturaOptima>
+    <fechaDescubrimiento>2022-03-25</fechaDescubrimiento>
+    <activo>true</activo>
+    <informacionAdicional>
+      <autor>Dr. Garcia</autor>
+      <referencia>DOI:13579</referencia>
+    </informacionAdicional>
+  </secuenciaBio>
+  
+  <secuenciaBio>
+    <nombre>Secuencia6</nombre>
+    <tipo>Proteína</tipo>
+    <secuencia>LKJHDSIEUR</secuencia>
+    <longitud>10</longitud>
+    <temperaturaOptima>68.4</temperaturaOptima>
+    <fechaDescubrimiento>2017-06-08</fechaDescubrimiento>
+    <activo>false</activo>
+    <informacionAdicional>
+      <autor>Dr. Martinez</autor>
+      <referencia>DOI:24680</referencia>
+    </informacionAdicional>
+  </secuenciaBio>  
+  
+</secuenciasBio>
