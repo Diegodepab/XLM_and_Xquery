@@ -1,0 +1,74 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Definición del elemento raíz "botanica", que contendrá todos los demás elementos -->
+  <xs:element name="botanica">
+    <xs:complexType>
+      <xs:sequence>
+
+        <!-- "tipoPlanta": define el tipo de planta (flor, árbol, etc.), de tipo string -->
+        <xs:element type="xs:string" name="tipoPlanta"/>
+
+        <!-- "especie": define la especie de la planta con un atributo adicional "clasificacion" -->
+        <xs:element name="especie">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <!-- Atributo "clasificacion" para especificar si es monocotiledónea, dicotiledónea, etc. -->
+                <xs:attribute type="xs:string" name="clasificacion"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- "planta": representa una planta, se puede repetir (maxOccurs="unbounded") y ser opcional (minOccurs="0") -->
+        <xs:element name="planta" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+
+              <!-- "nombreCientifico": define el nombre científico de la planta, de tipo string -->
+              <xs:element type="xs:string" name="nombreCientifico"/>
+
+              <!-- "alturaPromedio": define la altura promedio de la planta en metros, de tipo float -->
+              <xs:element type="xs:float" name="alturaPromedio"/>
+
+              <!-- "fechaClasificacion": fecha en la que la planta fue clasificada, de tipo date -->
+              <xs:element type="xs:date" name="fechaClasificacion"/>
+
+              <!-- "toxicidad": define si la planta es tóxica, de tipo string (se podría usar boolean) -->
+              <xs:element type="xs:string" name="toxicidad"/>
+
+              <!-- "parte": representa una parte de la planta (hoja, flor, etc.), puede repetirse y ser opcional -->
+              <xs:element name="parte" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+
+                    <!-- "numeroDeSubelementos": número de subelementos que componen la parte (por ejemplo, pétalos) -->
+                    <xs:element name="numeroDeSubelementos">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <!-- Atributo opcional "tipo" que define el tipo de subelemento (pétalos, estambres, etc.) -->
+                            <xs:attribute type="xs:string" name="tipo" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+
+                    <!-- "descripcion": descripción de la parte de la planta -->
+                    <xs:element type="xs:string" name="descripcion"/>
+                  </xs:sequence>
+
+                  <!-- Atributo opcional "nombre" que define el nombre de la parte de la planta (hoja, flor, etc.) -->
+                  <xs:attribute type="xs:string" name="nombre" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

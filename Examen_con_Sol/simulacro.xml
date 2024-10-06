@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<botanica>
+  <tipoPlanta>Flor</tipoPlanta>
+  <especie clasificacion="monocotiledonea">Orchidaceae</especie>
+  <planta>
+    <nombreCientifico>Vanilla planifolia</nombreCientifico>
+    <alturaPromedio>2</alturaPromedio>
+    <fechaClasificacion>1808-03-15</fechaClasificacion>
+    <toxicidad>false</toxicidad>
+    <parte nombre="Flor">
+      <numeroDeSubelementos tipo="petalos">5</numeroDeSubelementos>
+      <descripcion>Hoja transformada, por lo común de bellos colores, que forma parte de la corola de la flor.</descripcion>
+    </parte>
+  </planta>
+  <planta>
+    <nombreCientifico>Rosa chinensis</nombreCientifico>
+    <alturaPromedio>1</alturaPromedio>
+    <fechaClasificacion>1753-05-01</fechaClasificacion>
+    <toxicidad>false</toxicidad>
+    <parte nombre="Flor">
+      <numeroDeSubelementos tipo="estambres">4</numeroDeSubelementos>
+      <descripcion>Órgano masculino en la flor de las fanerógamas.</descripcion>
+    </parte>
+    <parte nombre="Hoja">
+      <numeroDeSubelementos tipo="estipulas">2</numeroDeSubelementos>
+      <descripcion>Apéndice foliáceo colocado en los lados del pecíolo o en el ángulo que este forma con el tallo.</descripcion>
+    </parte>
+  </planta>
+  <planta>
+    <nombreCientifico>Sequoia sempervirens</nombreCientifico>
+    <alturaPromedio>115</alturaPromedio>
+    <fechaClasificacion>1824-11-10</fechaClasificacion>
+    <toxicidad>false</toxicidad>
+    <parte nombre="Hoja">
+      <numeroDeSubelementos tipo="nervaduras">10</numeroDeSubelementos>
+      <descripcion>Conjunto de los nervios de una hoja.</descripcion>
+    </parte>
+  </planta>
+  <planta>
+    <nombreCientifico>Lavandula angustifolia</nombreCientifico>
+    <alturaPromedio>0.6</alturaPromedio>
+    <fechaClasificacion>1753-04-12</fechaClasificacion>
+    <toxicidad>false</toxicidad>
+    <parte nombre="Flor">
+      <numeroDeSubelementos tipo="sepalos">2</numeroDeSubelementos>
+      <descripcion>Hoja transformada, generalmente recia y de color verdoso, que forma parte del cáliz o verticilo externo de las flores heteroclamídeas.</descripcion>
+    </parte>
+    <parte nombre="Tallo">
+      <numeroDeSubelementos tipo="sin especificar" />
+      <descripcion>Órgano de las plantas que se prolonga en sentido contrario al de la raíz y sirve de sustentáculo a las hojas, flores y frutos.</descripcion>
+    </parte>
+  </planta>
+  <planta>
+    <nombreCientifico>Rubus fantastica</nombreCientifico>
+    <alturaPromedio>1.5</alturaPromedio>
+    <fechaClasificacion>2023-06-10</fechaClasificacion>
+    <toxicidad>false</toxicidad>
+  </planta>
+</botanica>
