@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biologia>
+    <!-- Elemento simple sin atributo: Reino -->
+    <reino>Animal</reino>
+
+    <!-- Elemento simple con atributo: Grupo -->
+    <grupo clasificador="hueso">Vertebrados</grupo>
+
+    <!-- Lista de organismos -->
+    <!-- Elemento compuesto sin atributo: Organismo -->
+    <organismo>
+
+        <!-- Elemento simple tipo string: Nombre cientifico -->
+        <nombreCientifico>Homo sapiens</nombreCientifico>
+
+        <!-- Elemento simple tipo number: Esperanza de vida en años -->
+        <esperanzaDeVida>80</esperanzaDeVida>
+
+        <!-- Elemento simple tipo date: Fecha de descubrimiento -->
+        <fechaDescubrimiento>1735-10-17</fechaDescubrimiento>
+
+        <!-- Elemento simple tipo boolean: Especie en peligro de extincion -->
+        <enPeligroDeExtincion>false</enPeligroDeExtincion>
+
+        <!-- Elemento compuesto con atributo: Organo -->
+        <organo nombre="Corazon">
+
+            <!-- Elemento simple tipo number con atributo y posibilidad de vacio: Numero de zonas o regiones -->
+            <numeroDeZonas tipo="camaras">4</numeroDeZonas>
+
+            <!-- Otros elementos simples: Descripcion -->
+            <descripcion>Organo que bombea sangre a todo el cuerpo.</descripcion>
+        </organo>
+
+    </organismo>
+
+    <organismo>
+        <nombreCientifico>Felis catus</nombreCientifico>
+        <esperanzaDeVida>15</esperanzaDeVida>
+        <fechaDescubrimiento>1758-05-24</fechaDescubrimiento>
+        <enPeligroDeExtincion>false</enPeligroDeExtincion>
+        <organo nombre="Estomago">
+            <numeroDeZonas tipo="sin especificar" />
+            <descripcion>Organo encargado de la digestion de los alimentos.</descripcion>
+        </organo>
+        <organo nombre="Pulmon">
+            <numeroDeZonas tipo="cantidad">2</numeroDeZonas>
+            <descripcion>Organo encargado de la respiracion.</descripcion>
+        </organo>
+    </organismo>
+
+    <organismo>
+        <nombreCientifico>Canis lupus familiaris</nombreCientifico>
+        <esperanzaDeVida>12</esperanzaDeVida>
+        <fechaDescubrimiento>1800-01-01</fechaDescubrimiento>
+        <enPeligroDeExtincion>false</enPeligroDeExtincion>
+    </organismo>
+
+    <organismo>
+        <nombreCientifico>Rattus norvegicus</nombreCientifico>
+        <esperanzaDeVida>2</esperanzaDeVida>
+        <fechaDescubrimiento>1758-05-24</fechaDescubrimiento>
+        <enPeligroDeExtincion>false</enPeligroDeExtincion>
+        <organo nombre="Intestino">
+            <numeroDeZonas tipo="secciones">3</numeroDeZonas>
+            <descripcion>Organo encargado de la absorcion de nutrientes.</descripcion>
+        </organo>
+        <organo nombre="Riñon">
+            <numeroDeZonas tipo="cantidad">2</numeroDeZonas>
+            <descripcion>Organo encargado de eliminar desperdicios de la sangre y el exceso de agua</descripcion>
+        </organo>
+        <organo nombre="Pulmon">
+            <numeroDeZonas tipo="lobulos">5</numeroDeZonas>
+            <descripcion>Organo encargado de la respiracion.</descripcion>
+        </organo>
+    </organismo>
+
+    <organismo>
+        <nombreCientifico>Salmo salar</nombreCientifico>
+        <esperanzaDeVida>10</esperanzaDeVida>
+        <fechaDescubrimiento>1772-05-22</fechaDescubrimiento>
+        <enPeligroDeExtincion>false</enPeligroDeExtincion>
+        <organo nombre="Pulmon">
+            <numeroDeZonas tipo="cantidad">0</numeroDeZonas>
+            <descripcion>Organo encargado de la respiracion.</descripcion>
+        </organo>
+    </organismo>
+</biologia>

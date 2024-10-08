@@ -1,0 +1,108 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="biologia">
+        <xs:complexType>
+            <xs:sequence>
+
+                <!-- Elemento simple sin atributo: Reino -->
+                <xs:element name="reino" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Elemento simple sin atributo: Reino</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+
+                <!-- Elemento simple con atributo: Grupo -->
+                <xs:element name="grupo">
+                    <xs:annotation>
+                        <xs:documentation>Elemento simple con atributo: Grupo</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute name="clasificador" type="xs:string"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+
+                 <!-- Lista de organismos -->
+                 <!-- Elemento compuesto sin atributo: Organismo -->
+                <xs:element name="organismo" maxOccurs="unbounded" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Lista de organismos. Elemento compuesto sin atributo: Organismo</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <!-- Elemento simple tipo string: Nombre cientifico -->
+                            <xs:element name="nombreCientifico" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Elemento simple tipo string: Nombre cientifico</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+
+                            <!-- Elemento simple tipo number: Esperanza de vida en años -->
+                            <xs:element name="esperanzaDeVida" type="xs:byte">
+                                <xs:annotation>
+                                    <xs:documentation>Elemento simple tipo number: Esperanza de vida en años</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+
+                            <!-- Elemento simple tipo date: Fecha de descubrimiento -->
+                            <xs:element name="fechaDescubrimiento" type="xs:date">
+                                <xs:annotation>
+                                    <xs:documentation>Elemento simple tipo date: Fecha de descubrimiento</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+
+                            <!-- Elemento simple tipo boolean: Especie en peligro de extincion -->
+                            <xs:element name="enPeligroDeExtincion" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Elemento simple tipo boolean: Especie en peligro de extincion</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+
+                            <!-- Elemento compuesto con atributo: Organo -->
+                            <xs:element name="organo" maxOccurs="unbounded" minOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation>Elemento compuesto con atributo: Organo</xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+
+                                        <!-- Elemento simple tipo number con atributo y posibilidad de vacio: Numero de zonas o regiones -->
+                                        <xs:element name="numeroDeZonas">
+                                            <xs:annotation>
+                                                <xs:documentation>Elemento simple tipo number con atributo y posibilidad de vacio: Numero de zonas o regiones</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="tipo" type="xs:string" use="optional"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                        <!-- Otros elementos simples: Descripcion -->
+                                        <xs:element name="descripcion" type="xs:string">
+                                            <xs:annotation>
+                                                <xs:documentation>Otros elementos simples: Descripcion</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+
+                                    </xs:sequence>
+                                    
+                                    <xs:attribute name="nombre" type="xs:string" use="optional"/>
+                                </xs:complexType>
+                            </xs:element>
+
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
