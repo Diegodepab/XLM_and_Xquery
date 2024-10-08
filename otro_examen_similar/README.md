@@ -1,6 +1,6 @@
 # Soluciones de Exámenes
 
-Este repositorio contiene soluciones a diferentes exámenes de XML, XSD, XQuery y XSLT, diseñadas para ayudar a compañeros y alumnos en su comprensión de estas tecnologías.
+Este repositorio contiene soluciones a diferentes exámenes de XML, XSD, XQuery y XSLT, diseñadas para alumnos en su comprensión de estas tecnologías.
 
 ## Examen XML
 
