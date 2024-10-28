@@ -1,0 +1,123 @@
+
+1. Los nombres de las proteinas y sus funciones
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sp: 
+<http://www.semanticweb.org/cbarba/SplicingOntology#>
+
+SELECT ?prot ?func
+WHERE {
+	?prot rdf:type sp:Proteina .
+	?prot sp:funcion ?func
+}
+
+
+2. Los nombres de los genes y sus longitudes
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sp: <http://www.semanticweb.org/cbarba/SplicingOntology#>
+
+SELECT ?gen (IF((?fin-?inicio) >= 0, (?fin-?inicio), (?fin-?inicio)) AS ?longitud)
+WHERE {
+	?gen rdf:type sp:Gen .
+	?gen sp:ubicacion_fin ?fin .
+	?gen sp:ubicacion_inicio ?inicio .
+}
+
+3. Los nombres de los genes y las descripciones de sus exones
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sp: <http://www.semanticweb.org/cbarba/SplicingOntology#>
+
+SELECT ?gen_nombre ?exon_descripcion
+WHERE {
+    ?exon rdf:type sp:Exon .
+	?exon sp:pertenece_a ?gen .
+	?gen sp:nombre ?gen_nombre .
+	?gen rdf:type sp:Gen .
+	?exon sp:descripcion ?exon_descripcion
+}
+
+
+4. Los exones y sus envoltorios separados por coma
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sp: <http://www.semanticweb.org/cbarba/SplicingOntology#>
+
+SELECT ?exon (GROUP_CONCAT(?envoltorio; separator=",  ") AS ?envoltoriosConcatenados)
+WHERE {
+    ?exon rdf:type sp:Exon .
+    ?exon sp:simbolizado_por?envoltorio .
+}
+GROUP BY ?exon
+
+
+5. Todas las interacciones proteicas sin redundancias
+
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sp: <http://www.semanticweb.org/cbarba/SplicingOntology#>
+
+SELECT DISTINCT ?prot1 ?prot2
+WHERE {
+    ?prot1 rdf:type sp:Proteina .
+    ?prot2 rdf:type sp:Proteina .
+    ?prot1 sp:interactua_con ?prot2 .
+    FILTER( STR(?prot1) < STR(?prot2))  # Filtrar interacciones consigo mismas
+}
+ORDER BY ?prot1 ?prot2
+
+
+6. Nombre de la proteina y el nombre del gen que la produce
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sp: <http://www.semanticweb.org/cbarba/SplicingOntology#>
+
+SELECT ?proteina_nombre ?gen_nombre
+WHERE {
+    ?proteina sp:producida_en ?sa .
+	?sa sp:empieza_por ?envoltorio .
+	?envoltorio sp:simboliza_a ?exon .
+	?exon sp:pertenece_a ?gen .
+	?proteina sp:nombre ?proteina_nombre .
+	?gen sp:nombre ?gen_nombre
+
+}
+
+
+7. Nombre de la proteina y el conjunto ordenado de exones que la producen
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sp: <http://www.semanticweb.org/cbarba/SplicingOntology#>
+
+SELECT ?proteina_nombre (GROUP_CONCAT(?exon; separator=", ") AS ?exons)
+WHERE {
+    ?sa sp:produce ?proteina .
+	?proteina sp:nombre ?proteina_nombre .
+	?sa sp:empieza_por ?envoltorio_inicial .
+	?envoltorio_inicial sp:seguido_de* ?envoltorio .
+	?envoltorio sp:simboliza_a ?exon
+}
+GROUP BY ?proteina_nombre
+ORDER BY ?proteina_nombre

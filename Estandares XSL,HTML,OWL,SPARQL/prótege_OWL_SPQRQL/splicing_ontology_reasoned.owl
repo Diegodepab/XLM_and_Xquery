@@ -1,0 +1,657 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/cbarba/SplicingOntology#"
+     xml:base="http://www.semanticweb.org/cbarba/SplicingOntology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:SplicingOntology="http://www.semanticweb.org/cbarba/SplicingOntology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#contiene_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#contiene_a">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#pertenece_a"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Gen"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#empieza_por -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#empieza_por">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#SplicingAlternativo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#ExonInSplicing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#interactua_con -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#interactua_con">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#interactua_con"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Proteina"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Proteina"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#pertenece_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#pertenece_a">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Gen"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#produce -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#produce">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#producida_en"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#SplicingAlternativo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Proteina"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#producida_en -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#producida_en">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Proteina"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#SplicingAlternativo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#seguido_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#seguido_de">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#ExonInSplicing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#ExonInSplicing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#simboliza_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#simboliza_a">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#simbolizado_por"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#ExonInSplicing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#simbolizado_por -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#simbolizado_por">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#ExonInSplicing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#contenido_AT -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#contenido_AT">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Gen"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#contenido_GC -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#contenido_GC">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Gen"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#descripcion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#descripcion">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#Gen"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#Proteina"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#SplicingAlternativo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#dominio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#dominio">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Gen"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#enfermedad_asociada -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#enfermedad_asociada">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Gen"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#estructura -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#estructura">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Proteina"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#funcion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#funcion">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#Gen"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#Proteina"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#localizacion_celular -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#localizacion_celular">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Proteina"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#nombre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#nombre">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#Gen"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#Proteina"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#organismo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#organismo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Gen"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#secuencia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#secuencia">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#ubicacion_cromosoma -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#ubicacion_cromosoma">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Gen"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#ubicacion_fin -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#ubicacion_fin">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#Gen"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#ubicacion_inicio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#ubicacion_inicio">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#Gen"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#Exon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#ExonInSplicing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#ExonInSplicing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#Gen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#Gen"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#Proteina -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#Proteina"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#SplicingAlternativo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#SplicingAlternativo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#Brca1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#Brca1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Proteina"/>
+        <interactua_con rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Egfr"/>
+        <interactua_con rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#P53"/>
+        <producida_en rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#sa1"/>
+        <descripcion>Proteína asociada con el riesgo de cáncer de mama</descripcion>
+        <estructura>Estructura tridimensional conocida</estructura>
+        <funcion>Función en la regulación de la reparación del ADN</funcion>
+        <localizacion_celular>Núcleo celular</localizacion_celular>
+        <nombre>Brca1</nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#Brca1-SpliceVariant1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#Brca1-SpliceVariant1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Proteina"/>
+        <producida_en rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#sa4"/>
+        <descripcion>Variante de la proteína Brca1 generada por splicing alternativo</descripcion>
+        <estructura>Estructura tridimensional en proceso de investigación</estructura>
+        <funcion>Función específica derivada del splicing alternativo</funcion>
+        <localizacion_celular>Núcleo celular</localizacion_celular>
+        <nombre>Brca1-SpliceVariant1</nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#Egfr -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#Egfr">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Proteina"/>
+        <interactua_con rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Brca1"/>
+        <interactua_con rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#P53"/>
+        <producida_en rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#sa3"/>
+        <descripcion>Receptor del factor de crecimiento epidérmico</descripcion>
+        <estructura>Estructura tridimensional conocida</estructura>
+        <funcion>Función en la regulación del crecimiento celular</funcion>
+        <localizacion_celular>Membrana celular</localizacion_celular>
+        <nombre>Egfr</nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#P53 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#P53">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Proteina"/>
+        <interactua_con rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Brca1"/>
+        <interactua_con rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Egfr"/>
+        <producida_en rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#sa2"/>
+        <descripcion>Proteína P53</descripcion>
+        <estructura>Estructura tridimensional conocida</estructura>
+        <funcion>Función en la supresión tumoral</funcion>
+        <localizacion_celular>Núcleo celular</localizacion_celular>
+        <nombre>P53</nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#brca1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#brca1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Gen"/>
+        <contiene_a rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_brca1"/>
+        <contiene_a rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon2_brca1"/>
+        <contenido_AT rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</contenido_AT>
+        <contenido_GC rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</contenido_GC>
+        <descripcion>Gen brca1 asociado con el riesgo de cáncer de mama</descripcion>
+        <dominio>Factor de transcripción</dominio>
+        <enfermedad_asociada>Cáncer de mama</enfermedad_asociada>
+        <enfermedad_asociada>Cáncer de ovario</enfermedad_asociada>
+        <funcion>Regulación de la reparación del ADN</funcion>
+        <nombre>brca1</nombre>
+        <organismo>Humano</organismo>
+        <ubicacion_cromosoma>17</ubicacion_cromosoma>
+        <ubicacion_fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41277500</ubicacion_fin>
+        <ubicacion_inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41196311</ubicacion_inicio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#egfr -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#egfr">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Gen"/>
+        <contiene_a rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_egfr"/>
+        <contiene_a rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon2_egfr"/>
+        <contenido_AT rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</contenido_AT>
+        <contenido_GC rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</contenido_GC>
+        <descripcion>Receptor del factor de crecimiento epidérmico</descripcion>
+        <dominio>Receptor de tirosina quinasa</dominio>
+        <enfermedad_asociada>Cáncer colorrectal</enfermedad_asociada>
+        <enfermedad_asociada>Cáncer de pulmón</enfermedad_asociada>
+        <funcion>Regulación del crecimiento celular</funcion>
+        <nombre>egfr</nombre>
+        <organismo>Humano</organismo>
+        <ubicacion_cromosoma>7</ubicacion_cromosoma>
+        <ubicacion_fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55222802</ubicacion_fin>
+        <ubicacion_inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55086714</ubicacion_inicio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#exon1_brca1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_brca1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+        <pertenece_a rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#brca1"/>
+        <simbolizado_por rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_brca1_sa1"/>
+        <simbolizado_por rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_brca1_sa4"/>
+        <descripcion>Exón 1 del gen brca1</descripcion>
+        <secuencia>ATGC...</secuencia>
+        <ubicacion_fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41196500</ubicacion_fin>
+        <ubicacion_inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41196311</ubicacion_inicio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#exon1_brca1_sa1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_brca1_sa1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#ExonInSplicing"/>
+        <seguido_de rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon2_brca1_sa1"/>
+        <simboliza_a rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_brca1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#exon1_brca1_sa4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_brca1_sa4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#ExonInSplicing"/>
+        <simboliza_a rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_brca1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#exon1_egfr -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_egfr">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+        <pertenece_a rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#egfr"/>
+        <simbolizado_por rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_egfr_sa3"/>
+        <descripcion>Exón 1 del gen egfr</descripcion>
+        <secuencia>AGTC...</secuencia>
+        <ubicacion_fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55087000</ubicacion_fin>
+        <ubicacion_inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55086714</ubicacion_inicio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#exon1_egfr_sa3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_egfr_sa3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#ExonInSplicing"/>
+        <seguido_de rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon2_egfr_sa3"/>
+        <simboliza_a rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_egfr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#exon1_tp53 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_tp53">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+        <pertenece_a rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#tp53"/>
+        <simbolizado_por rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_tp53_sa2"/>
+        <descripcion>Exón 1 del gen tp53</descripcion>
+        <secuencia>CTGA...</secuencia>
+        <ubicacion_fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7572000</ubicacion_fin>
+        <ubicacion_inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7571720</ubicacion_inicio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#exon1_tp53_sa2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_tp53_sa2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#ExonInSplicing"/>
+        <simboliza_a rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_tp53"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#exon2_brca1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#exon2_brca1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+        <pertenece_a rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#brca1"/>
+        <simbolizado_por rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon2_brca1_sa1"/>
+        <simbolizado_por rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon2_brca1_sa4"/>
+        <descripcion>Exón 2 del gen brca1</descripcion>
+        <secuencia>GTAC...</secuencia>
+        <ubicacion_fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41197750</ubicacion_fin>
+        <ubicacion_inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41197500</ubicacion_inicio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#exon2_brca1_sa1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#exon2_brca1_sa1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#ExonInSplicing"/>
+        <simboliza_a rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon2_brca1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#exon2_brca1_sa4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#exon2_brca1_sa4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#ExonInSplicing"/>
+        <seguido_de rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_brca1_sa4"/>
+        <simboliza_a rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon2_brca1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#exon2_egfr -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#exon2_egfr">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+        <pertenece_a rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#egfr"/>
+        <simbolizado_por rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon2_egfr_sa3"/>
+        <descripcion>Exón 2 del gen egfr</descripcion>
+        <secuencia>CTAG...</secuencia>
+        <ubicacion_fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55088250</ubicacion_fin>
+        <ubicacion_inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55088000</ubicacion_inicio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#exon2_egfr_sa3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#exon2_egfr_sa3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Exon"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#ExonInSplicing"/>
+        <simboliza_a rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon2_egfr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#sa1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#sa1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#SplicingAlternativo"/>
+        <empieza_por rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_brca1_sa1"/>
+        <produce rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Brca1"/>
+        <descripcion>Evento de splicing alternativo SA1</descripcion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#sa2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#sa2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#SplicingAlternativo"/>
+        <empieza_por rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_tp53_sa2"/>
+        <produce rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#P53"/>
+        <descripcion>Evento de splicing alternativo SA2</descripcion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#sa3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#sa3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#SplicingAlternativo"/>
+        <empieza_por rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_egfr_sa3"/>
+        <produce rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Egfr"/>
+        <descripcion>Evento de splicing alternativo SA3</descripcion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#sa4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#sa4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#SplicingAlternativo"/>
+        <empieza_por rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon2_brca1_sa4"/>
+        <produce rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Brca1-SpliceVariant1"/>
+        <descripcion>Evento de splicing alternativo SA4 para generar proteína alternativa de BRCA1</descripcion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cbarba/SplicingOntology#tp53 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cbarba/SplicingOntology#tp53">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#Gen"/>
+        <contiene_a rdf:resource="http://www.semanticweb.org/cbarba/SplicingOntology#exon1_tp53"/>
+        <contenido_AT rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</contenido_AT>
+        <contenido_GC rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</contenido_GC>
+        <descripcion>Gen tp53, también conocido como p53</descripcion>
+        <dominio>Factor de transcripción</dominio>
+        <enfermedad_asociada>Cáncer colorrectal</enfermedad_asociada>
+        <enfermedad_asociada>Síndrome de Li-Fraumeni</enfermedad_asociada>
+        <funcion>Supresión tumoral</funcion>
+        <nombre>tp53</nombre>
+        <organismo>Humano</organismo>
+        <ubicacion_cromosoma>17</ubicacion_cromosoma>
+        <ubicacion_fin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7590869</ubicacion_fin>
+        <ubicacion_inicio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7571720</ubicacion_inicio>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
